@@ -1,0 +1,52 @@
+{
+  "0": {
+    "title": "Key 0: Key to major groups of freshwater invertebrates",
+    "couplets": {
+      "1": [
+        {
+          "label": "Organism with hard shell",
+          "path": "/key/1/1"
+        },
+        {
+          "label": "Organism without a hard shell",
+          "path": "/key/0/2"
+        }
+      ],
+      "2": [
+        {
+          "label": "Head absent.  No fleshy lobes on either end of organism",
+          "path": "/key/2/1"
+        },
+        {
+          "label": "With a head (may be very small or drawn into body)",
+          "path": "/key/0/3"
+        }
+      ]
+    }
+  },
+  "1": {
+    "title": "Key 1:  Key to Phylum Mollusca Families",
+    "couplets": {
+      "1": [
+        {
+          "label": "Organism with one shell",
+          "path": "/key/1/2"
+        },
+        {
+          "label": "Organism with two shells (bivalves)",
+          "path": "/key/1/9"
+        }
+      ],
+      "2": [
+        {
+          "label": "Shell coiled",
+          "path": "/key/1/3"
+        },
+        {
+          "label": "Shell not coiled, forming a low cone like a limpet shell",
+          "path": "/family/planorbidae"
+        }
+      ]
+    }
+  }
+}
