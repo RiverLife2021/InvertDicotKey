@@ -7,7 +7,7 @@
 
 <script>
 export default {
-  name: "Families",
+  name: 'Families',
   props: {
     data: {
       type: Object,
@@ -16,10 +16,10 @@ export default {
   },
   computed: {
     name() {
-      return this.$route.params.name;
+      return this.$route.params.name
     },
   },
-};
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

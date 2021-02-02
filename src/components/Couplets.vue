@@ -8,10 +8,11 @@
         class="coupletBox"
       >
         <div
-          v-for="(option, index) in data[kId]['couplets'][qId]"
-          :key="index"
+          v-for="(option, letter) of data[kId]['couplets'][qId]"
+          :key="letter"
           class="coupletContent"
         >
+          <span>{{ letter }}.&nbsp;</span>
           <router-link :to="option.path">
             {{ option.label }}
           </router-link>
@@ -29,7 +30,7 @@
 
 <script>
 export default {
-  name: "Couplets",
+  name: 'Couplets',
   props: {
     data: {
       type: Object,
@@ -38,17 +39,17 @@ export default {
   },
   computed: {
     kId() {
-      return this.$route.params.kId;
+      return this.$route.params.kId
     },
     qId() {
       // qId is an array index, so add 1 to get question id
-      return this.$route.params.qId;
+      return this.$route.params.qId
     },
     title() {
-      return this.$route.params.title;
+      return this.$route.params.title
     },
   },
-};
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

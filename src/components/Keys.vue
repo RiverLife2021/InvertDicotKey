@@ -17,14 +17,14 @@
 
 <script>
 export default {
-  name: "Keys",
+  name: 'Keys',
   props: {
     data: {
       type: Object,
       default: () => ({}),
     },
   },
-};
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
