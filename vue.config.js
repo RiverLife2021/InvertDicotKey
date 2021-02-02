@@ -1,5 +1,5 @@
 module.exports = {
-  // FIXME: Just for demo on fireworks
-  publicPath: process.env.NODE_ENV === 'production' ? '/mrichar1/' : '/',
+  // FIXME: Change to final subdir when installing
+  publicPath: process.env.NODE_ENV === 'production' ? '/mrichar1/dichot_key/' : '',
   productionSourceMap: false,
 }
