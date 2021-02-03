@@ -64,6 +64,6 @@ export default {
 .coupletContent {
   border: 1px solid blue;
   height: 50vh;
-  width: 25vw;
+  max-width: 25vw;
 }
 </style>
