@@ -1,17 +1,22 @@
 <template>
   <div id="couplet">
-    <div v-if="kId in data">
-      <h2>{{ data[kId].title }}</h2>
+    <div v-if="kId in keyData">
+      <h2>{{ keyData[kId].title }}</h2>
       <h3>Couplet {{ qId }}</h3>
       <div
-        v-if="qId in data[kId]['couplets']"
+        v-if="qId in keyData[kId]['couplets']"
         class="coupletBox"
       >
         <div
-          v-for="(option, letter) of data[kId]['couplets'][qId]"
+          v-for="(option, letter) of keyData[kId]['couplets'][qId]"
           :key="letter"
           class="coupletContent"
         >
+          <div v-if="letter in imgData[kId][qId]">
+            <div v-for="img in imgData[kId][qId][letter]" :key="img">
+              <img class="keyimg" :src="img">
+            </div>
+          </div>
           <span>{{ letter }}.&nbsp;</span>
           <router-link :to="option.path">
             {{ option.label }}
@@ -32,7 +37,11 @@
 export default {
   name: 'Couplets',
   props: {
-    data: {
+    keyData: {
+      type: Object,
+      default: () => ({}),
+    },
+    imgData: {
       type: Object,
       default: () => ({}),
     },
@@ -65,5 +74,10 @@ export default {
   border: 1px solid blue;
   height: 50vh;
   max-width: 25vw;
+}
+
+.keyimg {
+  max-width: 100px;
+  max-height: 100px;
 }
 </style>

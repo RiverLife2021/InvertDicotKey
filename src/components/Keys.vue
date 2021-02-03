@@ -2,7 +2,7 @@
   <div class="dikey">
     <h2>Keys</h2>
     <ul
-      v-for="(key, id) of data"
+      v-for="(key, id) of keyData"
       :key="key"
     >
       <li>
@@ -19,7 +19,11 @@
 export default {
   name: 'Keys',
   props: {
-    data: {
+    keyData: {
+      type: Object,
+      default: () => ({}),
+    },
+    imgData: {
       type: Object,
       default: () => ({}),
     },

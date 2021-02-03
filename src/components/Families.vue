@@ -9,7 +9,11 @@
 export default {
   name: 'Families',
   props: {
-    data: {
+    keyData: {
+      type: Object,
+      default: () => ({}),
+    },
+    imgData: {
       type: Object,
       default: () => ({}),
     },

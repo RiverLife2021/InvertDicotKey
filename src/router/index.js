@@ -18,21 +18,21 @@ routes.push({
   name: 'Key',
   path: '/key',
   component: Keys,
-  props: { data: keyData },
+  props: { keyData: keyData },
 })
 
 routes.push({
   name: 'Couplets',
   path: '/key/:kId/:qId',
   component: Couplets,
-  props: { data: keyData, imgData: images },
+  props: { keyData: keyData, imgData: images },
 })
 
 routes.push({
   name: 'Families',
   path: '/family/:name',
   component: Families,
-  props: { data: keyData, imgData: images },
+  props: { keyData: keyData, imgData: images },
 })
 
 const router = createRouter({
