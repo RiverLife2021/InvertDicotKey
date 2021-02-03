@@ -20,7 +20,7 @@ walk.filesSync(root, function(basedir, filename) {
   if (!(q in images[key][couplet])) {
     images[key][couplet][q] = []
   }
-  bd = basedir.replace('public/', '')
+  bd = basedir.replace(/^public/, '')
   images[key][couplet][q].push(path.join(bd, filename))
 })
 
