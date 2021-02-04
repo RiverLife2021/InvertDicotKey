@@ -2,7 +2,7 @@ import { createWebHistory, createRouter } from 'vue-router'
 import Home from '@/views/Home.vue'
 import Keys from '@/components/Keys.vue'
 import Couplets from '@/components/Couplets.vue'
-import Families from '@/components/Families.vue'
+import Results from '@/components/Results.vue'
 import keyData from '@/assets/keyData.json'
 import images from '@/assets/images.json'
 
@@ -29,9 +29,9 @@ routes.push({
 })
 
 routes.push({
-  name: 'Families',
-  path: '/family/:name',
-  component: Families,
+  name: 'Results',
+  path: '/results/:name',
+  component: Results,
   props: { keyData: keyData, imgData: images },
 })
 
