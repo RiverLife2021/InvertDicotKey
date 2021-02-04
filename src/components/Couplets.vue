@@ -13,8 +13,14 @@
           class="coupletContent"
         >
           <div v-if="letter in imgData[kId][qId]">
-            <div v-for="img in imgData[kId][qId][letter]" :key="img">
-              <img class="keyimg" :src="img">
+            <div
+              v-for="img in imgData[kId][qId][letter]"
+              :key="img"
+            >
+              <img
+                class="keyimg"
+                :src="img"
+              >
             </div>
           </div>
           <span>{{ letter }}.&nbsp;</span>
