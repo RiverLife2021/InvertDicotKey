@@ -5,7 +5,7 @@
       <h3>Couplet {{ qId }}</h3>
       <div
         v-if="qId in keyData[kId]['couplets']"
-        class="p-grid p-jc-center"
+        class="p-grid gridBox"
       >
         <div
           v-for="(option, letter) of keyData[kId]['couplets'][qId]"
@@ -90,33 +90,37 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style lang="scss" scoped>
+$bgColor: #333333;
+$margin: 3px;
+
+.gridBox {
+}
+
 .couplet {
-  /* Make each box slightly less than 50% of total width */
-  width: 49vw;
-  height: 60vh;
-  background-color: #222222;
-  margin: 5px;
+  // Make each box slightly less than 50% of total width
+  background-color: $bgColor;
+  margin: $margin;
 }
 
 .galImage {
-  /* Ensure image is always slightly smaller than .couplet div */
-  max-height: 48vh;
+  // Ensure image is always slightly smaller than .couplet div
+  height: 48vh;
   object-fit: fill;
-  /* Change mouse cursor to zoom-in when hover over images */
+  // Change mouse cursor to zoom-in when hover over images
   cursor: zoom-in;
 }
 
 .emptyDiv {
-  /* Make an empty div the same size as an image would be */
+  // Make an empty div the same size as an image would be
   height: 48vh;
   width: 48vh;
 }
 
 .caption {
-  /* Caption box */
+  // Caption box
   height: 50px;
-  background-color: #222222;
+  background-color: $bgColor;
 }
 
 .caption-link {
