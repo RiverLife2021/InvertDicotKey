@@ -21,7 +21,10 @@ walk.filesSync(root, function(basedir, filename) {
     images[key][couplet][q] = []
   }
   bd = basedir.replace(/^public/, '/dikey')
-  images[key][couplet][q].push({ src: path.join(bd, filename) })
+  images[key][couplet][q].push({
+    src: path.join(bd, filename),
+    thumb: path.join(bd, 'thumb', filename),
+  })
 })
 
 // Write out images.json

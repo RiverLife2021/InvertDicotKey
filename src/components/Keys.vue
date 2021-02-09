@@ -1,16 +1,21 @@
 <template>
   <div class="dikey">
     <h2>Keys</h2>
-    <ul
+    <Panel
       v-for="(key, id) of keyData"
       :key="key"
+      collapsed="true"
+      toggleable="false"
     >
-      <li>
-        <router-link :to="{ name: 'Couplets', params: { kId: id, qId: '1' }}">
+      <template #header>
+        <router-link
+          :to="{ name: 'Couplets', params: { kId: id, qId: '1' }}"
+          class="caption-link"
+        >
           {{ key.title }}
         </router-link>
-      </li>
-    </ul>
+      </template>
+    </Panel>
   </div>
   <router-view />
 </template>
@@ -31,5 +36,10 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped />
+<style lang="scss">
+.caption-link {
+  // Style Panel header link text
+  font-size: 1.2rem;
+  color: #222222;
+}
+</style>
