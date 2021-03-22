@@ -16,11 +16,21 @@
             <template #header>
               <div class="caption">
                 <router-link
+                  v-if="option.path.startsWith('/')"
                   class="caption-link"
                   :to="option.path"
                 >
                   {{ letter }}) {{ option.label }}
                 </router-link>
+                <!-- Anything that isn't a path treat as an external link -->
+                <a
+                  v-else
+                  class="caption-link"
+                  :href="option.path"
+                  target="top"
+                >
+                  {{ letter }}) {{ option.label }}
+                </a>
                 <span>&nbsp;</span>
                 <button
                   v-if="imgData[kId][qId][letter]"
