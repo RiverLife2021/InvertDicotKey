@@ -2,7 +2,7 @@ const exec = require('child_process').exec
 
 module.exports = {
   // FIXME: Change to final subdir when installing
-  publicPath: '/dikey/',
+  publicPath: '/dichot/',
   productionSourceMap: false,
   configureWebpack: {
     plugins: [
