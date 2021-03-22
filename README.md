@@ -69,7 +69,10 @@ To build the app for production, run:
 ```
 yarn build
 ```
+The built application is written to `/dist`. Copy the entire contents (including subdirectories) to the production webserver.
 
 By default the app expects to be served from the `/dichot` path on the website, e.g. `http://example.com/dichot`
 
-This can be changed by editing the `publicPath` value in `vue.config.js`
+This can be changed by editing:
+* `publicPath` value in `vue.config.js`
+* `public/.htaccess`
