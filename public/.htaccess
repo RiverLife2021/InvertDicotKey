@@ -1,0 +1,3 @@
+# Make apache fall back to index.html for unknown paths (routes)
+FallbackResource /dichot/index.html
+
