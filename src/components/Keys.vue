@@ -4,8 +4,8 @@
     <Panel
       v-for="(key, id) of keyData"
       :key="id"
-      collapsed="true"
-      toggleable="false"
+      :collapsed="true"
+      :toggleable="false"
     >
       <template #header>
         <router-link
