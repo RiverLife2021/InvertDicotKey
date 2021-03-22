@@ -3,7 +3,7 @@
     <h2>Keys</h2>
     <Panel
       v-for="(key, id) of keyData"
-      :key="key"
+      :key="id"
       collapsed="true"
       toggleable="false"
     >
