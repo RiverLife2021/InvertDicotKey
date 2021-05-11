@@ -18,11 +18,11 @@ key_id: {
   title: "Key title description string",
   couplets: {
     couplet_id: {
-      question_a: {
+      a: {
         label: "Text description",
         path: "path to next couplet/endpoint"
       },
-      question_b: {
+      b: {
         ...
       }
     }
@@ -54,6 +54,8 @@ To update images, modify image files in `/src/public/images`, then from the proj
 
 ## Developing the app
 
+To develop the app you will need a system with [NodeJS](https://nodejs.org/en/) and [Yarn](https://yarnpkg.com/) installed.
+
 To test the app while developing, run:
 
 ```
@@ -73,6 +75,6 @@ The built application is written to `/dist`. Copy the entire contents (including
 
 By default the app expects to be served from the `/dichot` path on the website, e.g. `http://example.com/dichot`
 
-This can be changed by editing:
+This can be changed by editing both of:
 * `publicPath` value in `vue.config.js`
 * `public/.htaccess`
