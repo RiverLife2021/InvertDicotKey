@@ -3,11 +3,25 @@
 ## Development
 
 ## Project setup
+
+To develop the app you will need a system with [NodeJS](https://nodejs.org/en/) and [Yarn](https://yarnpkg.com/) installed.
+
+To install all the dependencies needed to run the app:
+
 ```
 yarn install
 ```
 
-##Key data
+To test the app while developing, run:
+
+```
+yarn serve
+```
+
+The link to the test app will be shown in the command output, e.g. http://localhost:8080
+
+
+## Key data
 
 Key data is stored in `src/assets/keyData.json`
 
@@ -52,26 +66,18 @@ To update images, modify image files in `/src/public/images`, then from the proj
 
 `node makeImages.js`
 
-## Developing the app
 
-To develop the app you will need a system with [NodeJS](https://nodejs.org/en/) and [Yarn](https://yarnpkg.com/) installed.
-
-To test the app while developing, run:
-
-```
-yarn serve
-```
-
-The link to the test app will be shown in the command output.
-
-## Building the app
+## Building/Publishing the app
 
 To build the app for production, run:
 
 ```
 yarn build
 ```
-The built application is written to `/dist`. Copy the entire contents (including subdirectories) to the production webserver.
+
+This will generate a 'compiled' version of the app that can be served up from any webserver without needing any special dependencies installed.
+
+The built application is written to `/dist`. Copy the entire contents (including subdirectories) to the production webserver in an appropriate directory, and set permissions as appropriate.
 
 By default the app expects to be served from the `/dichot` path on the website, e.g. `http://example.com/dichot`
 
