@@ -45,10 +45,10 @@ The structure is a nested object:
 ```
 A key can have any number of couplets. A couplet can have any number of questions.
 
-The `path` takes the following format:
+The `path` can be either of the following:
 
-`/key/x/y` - Link points to key x, couplet y.
-`https://example.com` - Link points to an external webpage (for 'endpoints').
+* `/key/x/y` - Link points to key x, couplet y.
+* `https://example.com` - Link points to an external webpage (for 'endpoints').
 
 NOTE: Since the key is JSON, any quotes will need to be correctly escaped - i.e. `"has a \"tail\" and \"horns\"."`
 
