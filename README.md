@@ -93,6 +93,7 @@ images/
       thumb/
         choice_2i.jpg
         choice_2ii.jpg
+```
 
 Each image should have a thumbnail stored in the `thumb` subdirectory relative to the main image. Thumbnails must be `400px` in `height`, but can be any `width`.
 
