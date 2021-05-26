@@ -58,7 +58,7 @@ Images are stored in `src/public/images` - in directories matching the key-coupl
 
 For example, if there was a single key, containing a couplet with 2 choices:
 
-``
+```
 0: {
   "title": "Key 0",
   "couplets": {
